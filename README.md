@@ -145,7 +145,46 @@ http://localhost:18131/api/v1/query/5202/thermal?key=c674a39b-921a-4759-a2fb-e59
 
 ### Running SQL Stream Builder (Flink SQL) against Pulsar
 
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/createTableThermalSSB.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/flinkdashboard2.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/materializedview1.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/materializedvieweditor.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/materializedviewjsonrest.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/materializedviewrunningssb.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/queryRecordSettings.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/queryconsolerunningssb.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssb1.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssb2.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssb3.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbFlink1.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbjobsettings.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbjobsettings2.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbpulsarconnector.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbthermalquery.jpg)
+
+![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/ssbthermalquery2.jpg)
+
+
+### Containers Running Cloudera CSP CE in Docker
+
 ![image](https://raw.githubusercontent.com/tspannhw/pulsar-csp-ce/main/images/containersssb.jpg)
+
+
 
 ### References
 
