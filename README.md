@@ -25,10 +25,26 @@ CREATE TABLE pulsar_test (
 
 
 CREATE TABLE pulsar_citibikenyc (
-  `city` STRING
+	`num_docks_disabled` DOUBLE,
+	`eightd_has_available_keys` STRING,
+	`station_status` STRING,
+	`last_reported` DOUBLE,
+	`is_installed` DOUBLE,
+	`num_ebikes_available` DOUBLE,
+	`num_bikes_available` DOUBLE,
+	`station_id` DOUBLE,
+	`is_renting` DOUBLE,
+	`is_returning` DOUBLE,
+	`num_docks_available` DOUBLE,
+	`num_bikes_disabled` DOUBLE,
+	`legacy_id` DOUBLE,
+	`valet` STRING,
+	`eightd_active_station_services` STRING,
+	`ts` DOUBLE,
+	`uuid` STRING
 ) WITH (
   'connector' = 'pulsar',
-  'topic' = 'persistent://public/default/citibikenyc',
+  'topics' = 'persistent://public/default/citibikenyc',
   'value.format' = 'json',
   'service-url' = 'pulsar://Timothys-MBP:6650',
   'admin-url' = 'http://Timothys-MBP:8080',
