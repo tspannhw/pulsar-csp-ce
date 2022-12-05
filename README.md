@@ -129,6 +129,8 @@ select last_reported, num_bikes_available, station_id, num_docks_available, ts
 from 
 pulsar_citibikenyc;
 
+select `systemtime`, `cputempf`, `cpu`, `humidity`, `co2`, `temperature`, `totalvocppb`, `equivalentco2ppm`, `pressure`, `temperatureicp`  
+from  pulsar_thermalsensors
 
 ````
 ### References
