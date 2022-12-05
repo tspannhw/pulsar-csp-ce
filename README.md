@@ -133,6 +133,16 @@ select `systemtime`, `cputempf`, `cpu`, `humidity`, `co2`, `temperature`, `total
 from  pulsar_thermalsensors
 
 ````
+
+### Create a Materialized View
+
+````
+http://localhost:18131/api/v1/query/5202/thermal?key=c674a39b-921a-4759-a2fb-e599366cfe51
+
+/api/v1/query/5202/thermal?key=c674a39b-921a-4759-a2fb-e599366cfe51
+
+````
+
 ### References
 
 * https://github.com/tspannhw/create-nifi-pulsar-flink-apps
