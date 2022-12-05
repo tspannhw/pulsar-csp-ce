@@ -23,6 +23,21 @@ CREATE TABLE pulsar_test (
   'generic' = 'true'
 );
 
+CREATE TABLE  `pulsar_table_1670269295` (
+  `col_str` STRING,
+  `col_int` INT,
+  `col_ts` TIMESTAMP(3),
+   WATERMARK FOR `col_ts` AS col_ts - INTERVAL '5' SECOND
+) WITH (
+  'format' = 'json' -- Data format
+  -- 'json.encode.decimal-as-plain-number' = 'false' -- Optional flag to specify whether to encode all decimals as plain numbers instead of possible scientific notations, false by default.
+  -- 'json.fail-on-missing-field' = 'false' -- Optional flag to specify whether to fail if a field is missing or not, false by default.
+  -- 'json.ignore-parse-errors' = 'false' -- Optional flag to skip fields and rows with parse errors instead of failing; fields are set to null in case of errors, false by default.
+  -- 'json.map-null-key.literal' = 'null' -- Optional flag to specify string literal for null keys when 'map-null-key.mode' is LITERAL, \"null\" by default.
+  -- 'json.map-null-key.mode' = 'FAIL' -- Optional flag to control the handling mode when serializing null key for map data, FAIL by default. Option DROP will drop null key entries for map data. Option LITERAL will use 'map-null-key.literal' as key literal.
+  -- 'json.timestamp-format.standard' = 'SQL' -- Optional flag to specify timestamp format, SQL by default. Option ISO-8601 will parse input timestamp in \"yyyy-MM-ddTHH:mm:ss.s{precision}\" format and output timestamp in the same format. Option SQL will parse input timestamp in \"yyyy-MM-dd HH:mm:ss.s{precision}\" format and output timestamp in the same format.
+);
+
 
 CREATE TABLE pulsar_citibikenyc (
 	`num_docks_disabled` DOUBLE,
@@ -52,6 +67,41 @@ CREATE TABLE pulsar_citibikenyc (
   'generic' = 'true'
 );
 
+CREATE TABLE pulsar_thermalsensors (
+  `uuid` STRING NOT NULL,
+  `ipaddress` STRING NOT NULL,
+  `cputempf` INT NOT NULL,
+  `runtime` INT NOT NULL,
+  `host` STRING NOT NULL,
+  `hostname` STRING NOT NULL,
+  `macaddress` STRING NOT NULL,
+  `endtime` STRING NOT NULL,
+  `te` STRING NOT NULL,
+  `cpu` FLOAT NOT NULL,
+  `diskusage` STRING NOT NULL,
+  `memory` FLOAT NOT NULL,
+  `rowid` STRING NOT NULL,
+  `systemtime` STRING NOT NULL,
+  `ts` INT NOT NULL,
+  `starttime` STRING NOT NULL,
+  `datetimestamp` STRING NOT NULL,
+  `temperature` FLOAT NOT NULL,
+  `humidity` FLOAT NOT NULL,
+  `co2` FLOAT NOT NULL,
+  `totalvocppb` FLOAT NOT NULL,
+  `equivalentco2ppm` FLOAT NOT NULL,
+  `pressure` FLOAT NOT NULL,
+  `temperatureicp` FLOAT NOT NULL
+) WITH (
+
+  'connector' = 'pulsar',
+  'topic' = 'persistent://public/default/thermalsensors',
+  'value.format' = 'json',
+  'service-url' = 'pulsar://Timothys-MBP:6650',
+  'admin-url' = 'http://Timothys-MBP:8080',
+  'scan.startup.mode' = 'earliest',
+  'generic' = 'true'
+)
 
 
 CREATE TABLE  fake_data (
