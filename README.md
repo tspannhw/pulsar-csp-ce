@@ -23,6 +23,32 @@ CREATE TABLE pulsar_test (
   'generic' = 'true'
 );
 
+
+CREATE TABLE pulsar_citibikenyc (
+  `city` STRING
+) WITH (
+  'connector' = 'pulsar',
+  'topic' = 'persistent://public/default/citibikenyc',
+  'value.format' = 'json',
+  'service-url' = 'pulsar://Timothys-MBP:6650',
+  'admin-url' = 'http://Timothys-MBP:8080',
+  'scan.startup.mode' = 'earliest',
+  'generic' = 'true'
+);
+
+
+
+CREATE TABLE  fake_data (
+city STRING )
+WITH (
+'connector' = 'faker',
+'rows-per-second' = '1',
+'fields.city.expression' = '#{Address.city}'
+);
+
+insert into pulsar_test
+select * from fake_data;
+
 ````
 ### References
 
