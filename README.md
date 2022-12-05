@@ -7,6 +7,15 @@ Cloudera CSP CE Plus Apache Pulsar
 
 * https://community.cloudera.com/t5/Cloudera-Stream-Processing-Forum/Using-Apache-Pulsar-with-SQL-Stream-Builder/m-p/349917
 
+
+### Once running in docker
+
+http://localhost:18121/ui/login
+
+### Login
+
+admin/admin
+
 ### SQL Testing
 
 ````
@@ -114,6 +123,12 @@ WITH (
 
 insert into pulsar_test
 select * from fake_data;
+
+
+select last_reported, num_bikes_available, station_id, num_docks_available, ts
+from 
+pulsar_citibikenyc;
+
 
 ````
 ### References
