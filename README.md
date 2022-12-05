@@ -7,6 +7,23 @@ Cloudera CSP CE Plus Apache Pulsar
 
 * https://community.cloudera.com/t5/Cloudera-Stream-Processing-Forum/Using-Apache-Pulsar-with-SQL-Stream-Builder/m-p/349917
 
+### SQL Testing
+
+````
+
+CREATE TABLE pulsar_test (
+  `city` STRING
+) WITH (
+  'connector' = 'pulsar',
+  'topic' = 'topic82547611',
+  'value.format' = 'raw',
+  'service-url' = 'pulsar://Timothys-MBP:6650',
+  'admin-url' = 'http://Timothys-MBP:8080',
+  'scan.startup.mode' = 'earliest',
+  'generic' = 'true'
+);
+
+````
 ### References
 
 * https://github.com/tspannhw/create-nifi-pulsar-flink-apps
