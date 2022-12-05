@@ -44,7 +44,7 @@ CREATE TABLE pulsar_citibikenyc (
 	`uuid` STRING
 ) WITH (
   'connector' = 'pulsar',
-  'topics' = 'persistent://public/default/citibikenyc',
+  'topic' = 'persistent://public/default/citibikenyc',
   'value.format' = 'json',
   'service-url' = 'pulsar://Timothys-MBP:6650',
   'admin-url' = 'http://Timothys-MBP:8080',
