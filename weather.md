@@ -1,6 +1,6 @@
 
 
-
+````
 CREATE TABLE airportweather (
 `dewpoint_c` DOUBLE,                      
 `dewpoint_f` DOUBLE,                      
@@ -72,4 +72,4 @@ CREATE TABLE `ssb`.`ssb_default`.`pulsar_citibikenyc2` (
   'topic' = 'persistent://public/default/citibikenyc'
 )
 
-
+````
